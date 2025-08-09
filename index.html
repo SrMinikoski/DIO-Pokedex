@@ -11,10 +11,7 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Font Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+
 
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="assets/css/global.css">
@@ -26,7 +23,31 @@
         <h1>Pokedex</h1>
 
         <ol class="pokemons" id="pokemonList">
-            <li class="pokemon">
+            <!-- Conteúdo sendo inserido pelo JavaScript -->
+        </ol>
+
+
+        <div class="paginacao" onclick="loadMore()">
+            <button class="carregarmais">
+                Load more
+            </button>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Nosso JS -->
+    <script src="assets/js/pokemonModel.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
+<!-- <li class="pokemon">
                 <span class="number">#001</span>
                 <span class="name">Bulbasauro</span>
 
@@ -39,18 +60,4 @@
                     <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
                         alt="Bulbasaur">
                 </div>
-            </li>
-        </ol>
-
-
-        
-    </section>
-
-    <!-- Nosso JS -->
-     <script src= "assets/js/pokemonModel.js"></script>
-     <script src= "assets/js/api.js"></script>
-    <script src= "assets/js/main.js"></script>
-    
-</body>
-
-</html>
+            </li> -->

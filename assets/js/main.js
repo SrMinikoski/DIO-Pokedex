@@ -1,10 +1,11 @@
 function htmlTipos(pokemonTypes) {
-    return pokemonTypes.map((typeName) => `<li class="type">${typeName}</li>`)
+    return pokemonTypes.map((typeName) => `<li class="type ${typeName}">${typeName}</li>`)
 }
 
 
 function htmlPokemon(pokemon) {
-    return `<li class="pokemon">
+    return `<li>
+        <a href="" class="pokemon ${pokemon.tipoMain}">
                 <span class="number">${pokemon.numero}</span>
                 <span class="name">${pokemon.nome}</span>
 
@@ -16,23 +17,35 @@ function htmlPokemon(pokemon) {
                     <img src="${pokemon.imagem}"
                         alt="${pokemon.nome}">
                 </div>
+             </a>
             </li>`
 }
 
+let offset = 0
+let limit = 10
+
 const htmlPokemonList = document.getElementById("pokemonList");
 //Versão Simplificada com Arrow Function
-pokeApi.getPokemon().then((pokemonList = []) => {
-    //Versão super resumida do map
-    const newHtml = pokemonList.map(htmlPokemon).join('')
-    htmlPokemonList.innerHTML += newHtml
-})
-    .catch((error) => console.log(error))
-    .finally(() => console.log("Requisição concluída"))
 
+function loadPokemon(offset, limit){
 
+        pokeApi.getPokemon(offset, limit)
+        .then((pokemonList = []) => {
+            //Versão super resumida do map
+            const newHtml = pokemonList.map(htmlPokemon).join('')
+            htmlPokemonList.innerHTML += newHtml
+        })
+            .catch((error) => console.log(error))
+            .finally(() => console.log("Requisição concluída"))
 
+}
 
+loadPokemon(offset, limit);
 
+function loadMore() {
+    offset += limit;
+    loadPokemon(offset, limit);
+}
 
 
     
