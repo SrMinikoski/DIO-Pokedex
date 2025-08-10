@@ -122,31 +122,9 @@
 		height: 70px;
 	}
 
-	.paginacao {
-		text-align: center;
-		margin: 2rem;
-	}
-
-	.carregarmais {
-		background-color: gray;
-		color: #fff;
-		padding: .60rem 1rem;
-		font-size: .8rem;
-		text-align: center;
-		border: none;
-		border-radius: 1rem;
-		transition: .2s;
-		cursor: pointer;
-	}
-
-	.carregarmais:hover {
-		transform: scale(1.1);
-		filter: brightness(1.1);
-	}
-
 	.device {
-		width: 40vw;
-		height: 100vh;
+		width: 35vw;
+		height: 98vh;
 		background-color: rgb(112, 12, 12);
 		margin: auto;
 		display: flex;
@@ -155,8 +133,8 @@
 	}
 
 	.tela {
-		width: 35vw;
-		height: 80vh;
+		width: 30vw;
+		height: 60vh;
 		background-color: white;
 		display: flex;
 		flex-direction: row;
@@ -166,12 +144,9 @@
 
 	.tela {
 		position: relative;
-		/* Necessário para os pseudo-elementos */
 		overflow: hidden;
-		/* Esconde os efeitos que vazarem */
 	}
 
-	/* Efeito de fade no topo */
 	.tela::before {
 		content: "";
 		position: absolute;
@@ -184,7 +159,6 @@
 		pointer-events: none;
 	}
 
-	/* Efeito de fade na base */
 	.tela::after {
 		content: "";
 		position: absolute;
@@ -197,22 +171,17 @@
 		pointer-events: none;
 	}
 
-	/* Efeito de blur nos itens durante o scroll */
 	.pokemons.scrolling .pokemon {
 		filter: blur(1px);
 		opacity: 0.9;
 		transition: filter 0.3s ease, opacity 0.3s ease;
 	}
 
-	/* Remove o blur quando para de scrollar */
 	.pokemons:not(.scrolling) .pokemon {
 		filter: blur(0);
 		opacity: 1;
 		transition: filter 0.5s ease, opacity 0.5s ease;
 	}
-
-
-
 
 	.pokemons {
 		display: flex;
@@ -221,27 +190,20 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		height: 80vh;
+		height: 100%;
 		margin: 0;
 		list-style: none;
 		overflow-y: overlay;
 		scroll-behavior: smooth;
-		/* Usando overlay para scrollbar flutuante */
 		box-sizing: content-box;
-		/* Importante para o padding não afetar as dimensões */
 
-
-		/* Esconde a scrollbar no Chrome, Safari e Edge */
 		&::-webkit-scrollbar {
 			width: 0;
 			height: 0;
 			background: transparent;
 		}
 
-		/* Esconde a scrollbar no Firefox */
 		scrollbar-width: none;
-
-		/* Esconde a scrollbar no IE */
 		-ms-overflow-style: none;
 	}
 
@@ -255,6 +217,31 @@
 		padding: 0.5rem 1rem 1rem 1rem;
 		border-radius: 1rem;
 		transition: .2s;
+	}
+
+	/* Botao 8bits */
+
+	.carregarmais {
+		background-color: #92CD41;
+		color: #fff;
+		font-family: 'Press Start 2P', monospace;
+		font-size: 20px;
+		padding: 10px 20px;
+		border: 4px solid #4AA52E;
+		text-decoration: none;
+		display: inline-block;
+		cursor: pointer;
+		box-shadow: -4px 4px 0px #4AA52E;
+		margin: 10rem;
+	}
+
+	.carregarmais:hover {
+		background-color: #76c442;
+	}
+
+	.carregarmais:active {
+		box-shadow: 0px 0px 0px #4AA52E;
+		transform: translate(-4px, 4px);
 	}
 
 
