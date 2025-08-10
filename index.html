@@ -19,24 +19,20 @@
 </head>
 
 <body>
-    <section class="content">
+    <div class="device">
         <h1>Pokedex</h1>
+        <div class="tela">
+            <div class="pokemons" id="pokemonList">
+                <!-- Conteúdo sendo inserido pelo JavaScript -->
+            </div>
+        </div><!--tela-->
+    </div><!--Device-->
 
-        <ol class="pokemons" id="pokemonList">
-            <!-- Conteúdo sendo inserido pelo JavaScript -->
-        </ol>
-
-
-        <div class="paginacao" >
-            <button class="carregarmais" onclick="loadMore()">
-                Load more
-            </button>
-        </div>
-    </section>
-
-
-
-
+    <div class="paginacao">
+        <button class="carregarmais" onclick="loadMore()">
+            Load more
+        </button>
+    </div>
 
     <!-- Nosso JS -->
     <script src="assets/js/pokemonModel.js"></script>
