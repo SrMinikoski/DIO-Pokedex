@@ -1,81 +1,108 @@
+	@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Luckiest+Guy&family=Mea+Culpa&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 	.normal {
 		background-color: #A8A77A;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.fire {
 		background-color: #EE8130;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.water {
 		background-color: #6390F0;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.electric {
 		background-color: #F7D02C;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.grass {
 		background-color: #7AC74C;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.ice {
 		background-color: #96D9D6;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.fighting {
-		background-color: #C22E28
+		background-color: #C22E28;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.poison {
 		background-color: #A33EA1;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.ground {
 		background-color: #E2BF65;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.flying {
 		background-color: #A98FF3;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.psychic {
 		background-color: #F95587;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.bug {
 		background-color: #A6B91A;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.rock {
 		background-color: #B6A136;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.ghost {
 		background-color: #735797;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.dragon {
 		background-color: #6F35FC;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.dark {
 		background-color: #705746;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.steel {
 		background-color: #B7B7CE;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.fairy {
 		background-color: #D685AD;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 
-
+	h1 {
+		color: white;
+		font-size: 4rem;
+		letter-spacing: .2rem;
+		height: 2rem;
+		margin-top: .5rem;
+	}
 
 
 	.pokemon:hover {
-		transform: scale(1.08);
+		transform: scale(1.05);
+		transition: .2s;
 	}
 
 	.pokemon .number {
@@ -123,23 +150,27 @@
 	}
 
 	.device {
-		width: 35vw;
+		width: 32rem;
 		height: 98vh;
 		background-color: rgb(112, 12, 12);
 		margin: auto;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		border: solid 4px rgb(71, 12, 12);
+		border-radius: 3rem;
 	}
 
 	.tela {
-		width: 30vw;
+		width: 90%;
 		height: 60vh;
-		background-color: white;
+		background-color: rgb(114, 131, 119);
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		border-radius: 1rem;
+		box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.651);
+		border: solid 3px rgb(71, 12, 12);
 	}
 
 	.tela {
@@ -154,7 +185,7 @@
 		left: 0;
 		right: 0;
 		height: 15px;
-		background: linear-gradient(to bottom, white, transparent);
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.089), transparent);
 		z-index: 2;
 		pointer-events: none;
 	}
@@ -166,7 +197,7 @@
 		left: 0;
 		right: 0;
 		height: 15px;
-		background: linear-gradient(to top, white, transparent);
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.089), transparent);
 		z-index: 2;
 		pointer-events: none;
 	}
@@ -175,12 +206,14 @@
 		filter: blur(1px);
 		opacity: 0.9;
 		transition: filter 0.3s ease, opacity 0.3s ease;
+		transition: .2s;
 	}
 
 	.pokemons:not(.scrolling) .pokemon {
 		filter: blur(0);
 		opacity: 1;
 		transition: filter 0.5s ease, opacity 0.5s ease;
+		transition: .2s;
 	}
 
 	.pokemons {
@@ -196,7 +229,7 @@
 		overflow-y: overlay;
 		scroll-behavior: smooth;
 		box-sizing: content-box;
-
+		transition: .2s;
 		&::-webkit-scrollbar {
 			width: 0;
 			height: 0;
@@ -219,20 +252,19 @@
 		transition: .2s;
 	}
 
-	/* Botao 8bits */
+
 
 	.carregarmais {
 		background-color: #92CD41;
 		color: #fff;
-		font-family: 'Press Start 2P', monospace;
 		font-size: 20px;
 		padding: 10px 20px;
 		border: 4px solid #4AA52E;
 		text-decoration: none;
 		display: inline-block;
 		cursor: pointer;
-		box-shadow: -4px 4px 0px #4AA52E;
-		margin: 10rem;
+		box-shadow: -4px 4px 0px #4AA52E, -5px 5px 10px #000000a2;
+
 	}
 
 	.carregarmais:hover {
@@ -240,11 +272,30 @@
 	}
 
 	.carregarmais:active {
-		box-shadow: 0px 0px 0px #4AA52E;
+		box-shadow: -5px 5px 10px #0000004b;
 		transform: translate(-4px, 4px);
 	}
 
+	.paginacao {
+		width: 20rem;
+		height: 4rem;
+		text-align: center;
+		margin-top: 1rem;
 
+	}
+	.contagem{
+		background-color: rgb(114, 131, 119);
+		padding: 1rem;
+		width: 15rem;
+		border: solid 3px rgb(71, 12, 12);
+		color: rgb(34, 236, 61);
+		border-radius: 1rem;
+		margin-top: 1rem;
+		text-align: center;
+		font-size: 1.2rem;
+		box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.651);
+		max-width: 30vw;;
+	}
 
 	@media screen and (min-width: 380px) {
 		.pokemons {

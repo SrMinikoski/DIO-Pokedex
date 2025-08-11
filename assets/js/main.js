@@ -21,23 +21,29 @@ function htmlPokemon(pokemon) {
             </li>`
 }
 
-let offset = 0
-let limit = 10
+let offset = 0;
+let limit = 10;
+let pokemonCount = 0;
 
 const htmlPokemonList = document.getElementById("pokemonList");
-//Versão Simplificada com Arrow Function
 
-function loadPokemon(offset, limit){
+function updateCounter() {
+    const counterElement = document.querySelector('.contagem span');
+    counterElement.textContent = `Contagem: ${pokemonCount.toString().padStart(2, '0')}`;
+}
 
-        pokeApi.getPokemon(offset, limit)
+function loadPokemon(offset, limit) {
+    pokeApi.getPokemon(offset, limit)
         .then((pokemonList = []) => {
-            //Versão super resumida do map
             const newHtml = pokemonList.map(htmlPokemon).join('')
             htmlPokemonList.innerHTML += newHtml
+            
+            // Atualiza a contagem
+            pokemonCount += pokemonList.length;
+            updateCounter();
         })
-            .catch((error) => console.log(error))
-            .finally(() => console.log("Requisição concluída"))
-
+        .catch((error) => console.log(error))
+        .finally(() => console.log("Requisição concluída"))
 }
 
 loadPokemon(offset, limit);
@@ -46,6 +52,9 @@ function loadMore() {
     offset += limit;
     loadPokemon(offset, limit);
 }
+
+// Inicializa o contador
+updateCounter();
 
 
     
