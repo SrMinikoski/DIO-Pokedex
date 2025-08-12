@@ -1,262 +1,339 @@
 	@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Luckiest+Guy&family=Mea+Culpa&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 	.normal {
-	    background-color: #A8A77A;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #A8A77A;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.fire {
-	    background-color: #EE8130;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #EE8130;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.water {
-	    background-color: #6390F0;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #6390F0;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.electric {
-	    background-color: #F7D02C;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #F7D02C;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.grass {
-	    background-color: #7AC74C;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #7AC74C;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.ice {
-	    background-color: #96D9D6;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #96D9D6;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.fighting {
-	    background-color: #C22E28;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #C22E28;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.poison {
-	    background-color: #A33EA1;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #A33EA1;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.ground {
-	    background-color: #E2BF65;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #E2BF65;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.flying {
-	    background-color: #A98FF3;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #A98FF3;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.psychic {
-	    background-color: #F95587;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #F95587;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.bug {
-	    background-color: #A6B91A;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #A6B91A;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.rock {
-	    background-color: #B6A136;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #B6A136;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.ghost {
-	    background-color: #735797;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #735797;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.dragon {
-	    background-color: #6F35FC;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #6F35FC;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.dark {
-	    background-color: #705746;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #705746;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.steel {
-	    background-color: #B7B7CE;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #B7B7CE;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 	.fairy {
-	    background-color: #D685AD;
-	    border: solid 2px rgba(0, 0, 0, 0.5);
+		background-color: #D685AD;
+		border: solid 2px rgba(0, 0, 0, 0.5);
 	}
 
 
 	h1 {
-	    color: white;
-	    font-size: 4rem;
-	    letter-spacing: .2rem;
-	    height: 2rem;
-	    margin-top: .5rem;
+		color: white;
+		font-size: 4rem;
+		letter-spacing: .2rem;
+		height: 2rem;
+		margin-top: .5rem;
 	}
 
 
 
 
 	.pokemon .number {
-	    color: #000;
-	    opacity: .3;
-	    text-align: right;
-	    font-size: .625rem;
+		color: #000;
+		opacity: .3;
+		text-align: right;
+		font-size: .625rem;
 	}
 
 	.pokemon .name {
-	    color: #fff;
-	    margin-bottom: .25rem;
-	    text-transform: capitalize;
+		color: #fff;
+		margin-bottom: .25rem;
+		text-transform: capitalize;
 	}
 
 
 
 	.pokemon .types {
-	    padding: 0;
-	    margin: 0;
-	    list-style: none;
+		padding: 0;
+		margin-top: 1.5rem;
+		list-style: none;
 	}
 
 	.pokemon .types .type {
-	    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.199)) brightness(1.1);
-	    color: #fff;
-	    padding: 1rem 2rem;
-	    letter-spacing: .1rem;
-	    font-weight: 400;
-	    text-transform: capitalize;
-	    margin: .25rem 0;
-	    font-size: 1.2rem;
-	    text-align: center;
-	    border-radius: 2rem;
+		filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.199)) brightness(1.1);
+		color: #fff;
+		padding: 1rem 2rem;
+		letter-spacing: .1rem;
+		font-weight: 400;
+		text-transform: capitalize;
+		margin: .25rem 0;
+		font-size: 1.2rem;
+		text-align: center;
+		border-radius: 2rem;
 	}
 
 
 
 	.device {
-	    width: 32rem;
-	    height: 98vh;
-	    background-color: rgb(112, 12, 12);
-	    margin: auto;
-	    display: flex;
-	    flex-direction: column;
-	    align-items: center;
-	    border: solid 4px rgb(71, 12, 12);
-	    border-radius: 3rem;
+		width: 32rem;
+		height: 98vh;
+		background-color: rgb(112, 12, 12);
+		margin: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: solid 4px rgb(71, 12, 12);
+		border-radius: 3rem;
 	}
 
 	.tela {
-	    width: 90%;
-	    height: 85%;
-	    background-color: rgb(114, 131, 119);
-	    display: flex;
-	    flex-direction: row;
-	    flex-wrap: wrap;
-	    border-radius: 1.8rem;
-	    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.651);
-	    border: solid 3px rgb(71, 12, 12);
-	    position: relative;
-	    overflow: hidden;
+		width: 90%;
+		height: 85%;
+		background-color: rgb(114, 131, 119);
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		border-radius: 1.8rem;
+		box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.651);
+		border: solid 3px rgb(71, 12, 12);
+		position: relative;
+		overflow: hidden;
 	}
 
 	.tela::before {
-	    content: "";
-	    position: absolute;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    height: 15px;
-	    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.089), transparent);
-	    z-index: 2;
-	    pointer-events: none;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 15px;
+		background: linear-gradient(to bottom, rgba(0, 0, 0, 0.089), transparent);
+		z-index: 2;
+		pointer-events: none;
 	}
 
 	.tela::after {
-	    content: "";
-	    position: absolute;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-	    height: 15px;
-	    background: linear-gradient(to top, rgba(0, 0, 0, 0.089), transparent);
-	    z-index: 2;
-	    pointer-events: none;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 15px;
+		background: linear-gradient(to top, rgba(0, 0, 0, 0.089), transparent);
+		z-index: 2;
+		pointer-events: none;
 	}
 
 	.pokemons.scrolling .pokemon {
-	    filter: blur(1px);
-	    opacity: 0.9;
-	    transition: filter 0.3s ease, opacity 0.3s ease;
-	    transition: .2s;
+		filter: blur(1px);
+		opacity: 0.9;
+		transition: filter 0.3s ease, opacity 0.3s ease;
+		transition: .2s;
 	}
 
 	.pokemons:not(.scrolling) .pokemon {
-	    filter: blur(0);
-	    opacity: 1;
-	    transition: filter 0.5s ease, opacity 0.5s ease;
-	    transition: .2s;
+		filter: blur(0);
+		opacity: 1;
+		transition: filter 0.5s ease, opacity 0.5s ease;
+		transition: .2s;
 	}
 
 	.pokemons {
-	    display: flex;
-	    flex-wrap: wrap;
-	    text-align: center;
-	    justify-content: center;
-	    align-items: center;
-	    width: 100%;
-	    height: 100%;
-	    margin: 0;
-	    list-style: none;
-	    overflow-y: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		list-style: none;
+
 	}
 
 	.pokemon {
-	    display: flex;
-	    flex-direction: column;
-	    margin: .5rem;
-	    width: 98%;
-	    height: 95%;
-	    overflow: hidden;
-	    padding: 0.5rem 1rem 1rem 1rem;
-	    border-radius: 2rem;
-	    transition: .2s;
+		display: flex;
+		flex-direction: column;
+		margin: .5rem;
+		width: 98%;
+		height: 90%;
+		padding: 0.5rem .5rem 0rem .5rem;
+		border-radius: 2rem;
+		transition: .2s;
+		overflow: hidden;
 	}
-    .detail{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin: 2rem 0rem;
-    }
-    img{
-        width: 8rem;
-        margin: 0 auto;
-    }
-    
 
+	.detail {
+		display: flex;
+		margin-top: 0rem;
+		flex-direction: column;
+		justify-content: start;
+		height: 100%;
+		background-color: white;
+		border-radius: 2rem 2rem 0 0;
+		overflow: auto;
 
+		&::-webkit-scrollbar {
+			width: 0;
+			height: 0;
+			background: transparent;
+		}
 
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
 
+	#sprite {
+		width: 7rem;
+		margin: auto;
+	}
+
+	.spritespace {
+		margin-top: 1rem;
+	}
+
+	.voltar {
+		margin-top: .5rem;
+		margin-bottom: -.5rem;
+	}
+
+	.voltar img {
+		width: 2rem;
+		transition: .2s;
+	}
+
+	.voltar img:hover {
+		transform: scale(1.2);
+		filter: contrast(1.5);
+	}
+
+	.vertical-table {
+		border-collapse: collapse;
+		width: 70%;
+		margin: auto;
+		margin-bottom: 1.5rem;
+		font-size: 1.3rem;
+
+	}
+
+	.vertical-table tr {
+
+		border-bottom: solid 2px rgba(0, 0, 0, 0.26);
+	}
+
+	.vertical-table th {
+		text-align: left;
+		padding: 0.3rem 1rem 0.3rem 0;
+		font-weight: bold;
+		color: #555;
+		vertical-align: top;
+
+	}
+
+	.vertical-table td {
+		padding: 0.3rem 0;
+		text-align: right;
+		font-size: 1.1rem;
+	}
 
 
 	@media screen and (min-width: 380px) {
-	    .pokemons {
-	        grid-template-columns: 1fr 1fr;
-	    }
+		.pokemons {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 
 	@media screen and (min-width: 576px) {
-	    .pokemons {
-	        grid-template-columns: 1fr 1fr 1fr;
-	    }
+		.pokemons {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
 	}
 
 	@media screen and (min-width: 992px) {
-	    .pokemons {
-	        grid-template-columns: 1fr 1fr 1fr 1fr;
-	    }
+		.pokemons {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+
+	#sprite {
+		animation: bounce 1.5s infinite ease-in-out;
+		transform-origin: center bottom;
+	}
+
+	@keyframes bounce {
+
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-15px);
+			/* Ajuste este valor para controlar a altura do pulo */
+		}
 	}
