@@ -5,7 +5,7 @@ function htmlTipos(pokemonTypes) {
 
 function htmlPokemon(pokemon) {
     return `<li>
-        <a href="" class="pokemon ${pokemon.tipoMain}">
+        <a href="detail.html" class="pokemon ${pokemon.tipoMain}">
                 <span class="number">${pokemon.numero}</span>
                 <span class="name">${pokemon.nome}</span>
 
