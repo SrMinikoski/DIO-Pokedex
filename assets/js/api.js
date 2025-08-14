@@ -5,7 +5,6 @@ function convertApiPokeToModelPoke(detalhesPokemon) {
     pokemon.nome = detalhesPokemon.name
     pokemon.numero = detalhesPokemon.id
 
-
     const tipos = detalhesPokemon.types.map((typeSlot) => typeSlot.type.name)
     const [tipo] = tipos
 
@@ -13,35 +12,41 @@ function convertApiPokeToModelPoke(detalhesPokemon) {
     pokemon.tipoMain = tipo
 
     pokemon.imagem = detalhesPokemon.sprites.other.dream_world.front_default
+    pokemon.species = detalhesPokemon.species.url
+    pokemon.height = detalhesPokemon.height / 10 // Convert to meters
+    pokemon.weight = detalhesPokemon.weight / 10 // Convert to kg
+    pokemon.abilities = detalhesPokemon.abilities.map(ability => ability.ability.name)
+    pokemon.stats = detalhesPokemon.stats.map(stat => {
+        return {
+            name: stat.stat.name,
+            value: stat.base_stat
+        }
+    })
+    pokemon.moves = detalhesPokemon.moves.map(move => move.move.name)
 
     return pokemon
 }
 
-pokeApi.getPokemon = (offset, limit) => {
+pokeApi.getPokemonDetail = (pokemon) => {
+    return fetch(pokemon.url)
+        .then((response) => response.json())
+        .then(convertApiPokeToModelPoke)
+}
 
+pokeApi.getPokemon = (offset, limit) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
 
     return fetch(url)
         .then((response) => response.json())
         .then((jsonbody) => jsonbody.results)
-        .then
-        (
-            (pokemons) => {
-                return pokemons.map(
-                    (pokemon) => fetch(pokemon.url)
-                        .then((response) => response.json())
-                        .then(convertApiPokeToModelPoke)
-                )
-            }
-        )
-        .then(
-            (detalhesRequests) => Promise.all(detalhesRequests)
-        )
-        .then(
-            (detalhesPokemon) => detalhesPokemon)
-
-
+        .then((pokemons) => pokemons.map(pokeApi.getPokemonDetail))
+        .then((detalhesRequests) => Promise.all(detalhesRequests))
+        .then((detalhesPokemon) => detalhesPokemon)
 }
 
-
-
+pokeApi.getPokemonById = (id) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`
+    return fetch(url)
+        .then((response) => response.json())
+        .then(convertApiPokeToModelPoke)
+}

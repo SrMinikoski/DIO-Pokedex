@@ -247,6 +247,10 @@
 		-ms-overflow-style: none;
 	}
 
+	article {
+		margin: 0rem 1rem 0rem 1rem;
+	}
+
 	#sprite {
 		width: 7rem;
 		margin: auto;
@@ -294,12 +298,30 @@
 
 	}
 
-	.vertical-table td {
+	.vertical-table td,
+	.vertical-table td tr {
 		padding: 0.3rem 0;
+		width: 10rem;
+		height: fit-content;
 		text-align: right;
 		font-size: 1.1rem;
+		display: flex;
+		flex-wrap: wrap;
+		overflow-wrap: anywhere;
 	}
 
+	ul {
+		list-style: none;
+		margin: 2rem 0 -2rem 0 auto !important;
+		padding: 0 !important;
+	}
+
+	li {
+		list-style: none;
+		margin: 0 auto !important;
+		padding: -1rem 0 1rem 0 !important;
+		font-size: 1.3rem;
+	}
 
 	@media screen and (min-width: 380px) {
 		.pokemons {

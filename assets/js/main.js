@@ -2,34 +2,35 @@ function htmlTipos(pokemonTypes) {
     return pokemonTypes.map((typeName) => `<li class="type ${typeName}">${typeName}</li>`)
 }
 
-
 function htmlPokemon(pokemon) {
-    return `<li>
-        <a href="detail.html" class="pokemon ${pokemon.tipoMain}">
-                <span class="number">${pokemon.numero}</span>
-                <span class="name">${pokemon.nome}</span>
+    return `
+        <li class="pokemon ${pokemon.tipoMain}" onclick="redirectToDetail(${pokemon.numero})">
+            <span class="number">#${pokemon.numero.toString().padStart(3, '0')}</span>
+            <span class="name">${pokemon.nome}</span>
+            <div class="detail">
+                <ol class="types">
+                    ${htmlTipos(pokemon.tipos).join('')}                        
+                </ol>
+                <img src="${pokemon.imagem}" alt="${pokemon.nome}">
+            </div>
+        </li>`
+}
 
-                <div class="detail">
-                    <ol class="types">
-                        ${htmlTipos(pokemon.tipos).join('')}                        
-                    </ol>
-
-                    <img src="${pokemon.imagem}"
-                        alt="${pokemon.nome}">
-                </div>
-             </a>
-            </li>`
+function redirectToDetail(pokemonId) {
+    window.location.href = `detail.html?id=${pokemonId}`;
 }
 
 let offset = 0;
-let limit = 10;
+let limit = 4;
 let pokemonCount = 0;
 
 const htmlPokemonList = document.getElementById("pokemonList");
 
 function updateCounter() {
     const counterElement = document.querySelector('.contagem span');
-    counterElement.textContent = `Contagem: ${pokemonCount.toString().padStart(2, '0')}`;
+    if (counterElement) {
+        counterElement.textContent = `Contagem: ${pokemonCount.toString().padStart(2, '0')}`;
+    }
 }
 
 function loadPokemon(offset, limit) {
@@ -38,7 +39,6 @@ function loadPokemon(offset, limit) {
             const newHtml = pokemonList.map(htmlPokemon).join('')
             htmlPokemonList.innerHTML += newHtml
             
-            // Atualiza a contagem
             pokemonCount += pokemonList.length;
             updateCounter();
         })
@@ -53,51 +53,4 @@ function loadMore() {
     loadPokemon(offset, limit);
 }
 
-// Inicializa o contador
 updateCounter();
-
-
-    
-    // //Versão simplificada com MAP convertendo a lista de pokemon na lista de Li's do HTML
-    // const listaConvert = pokemonList.map((pokemon) => {
-    //     return htmlPokemon(pokemon)
-    // });    
-
-    // //Unindo os itens da lista
-    // const newHtml = listaConvert.join('')
-    
-    // htmlPokemonList.innerHTML += newHtml
-
-
-
-
-
-
-    // // Versão sem MAP
-    // const listItem = []
-    // for (let i = 0; i < pokemonList.length; i++) {
-    //     const pokemon = pokemonList[i];
-    //     listItem.push(htmlPokemon(pokemon))
-    // }
-    // console.log(listItem)
-
-
-
-
-
-
-
-// Versão Extendida
-// fetch(url)
-// .then (function(response) {
-//     return response.json();
-// })
-// .then(function(jsonbody) {
-//     console.log(jsonbody);
-// })
-// .catch(function (error) {
-//     console.log(error);
-// })
-// .finally(function() {  
-//     console.log("Requisição concluída");
-// });
