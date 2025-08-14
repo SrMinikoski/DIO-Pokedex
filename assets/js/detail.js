@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const pokemonId = urlParams.get('id');
 
+    // Modificamos o event listener para pageshow
+    window.addEventListener('pageshow', function(event) {
+        // Se a página está sendo carregada do cache (como ao voltar com o botão do navegador)
+        if (event.persisted) {
+            // Não fazemos nada aqui, o estado já está salvo
+        }
+    });
+
     if (pokemonId) {
         loadPokemonDetail(pokemonId);
     }
@@ -27,9 +35,9 @@ function displayPokemonDetail(pokemon) {
 
     document.querySelector('h1').textContent = pokemon.nome;
 
-    
+
     const pokemonLi = document.querySelector('.pokemon');
-    pokemonLi.className = `pokemon ${pokemon.tipoMain}`; 
+    pokemonLi.className = `pokemon ${pokemon.tipoMain}`;
 
 
 
@@ -37,7 +45,7 @@ function displayPokemonDetail(pokemon) {
     spriteImg.src = pokemon.imagem;
     spriteImg.alt = pokemon.nome;
 
- 
+
     const typesContainer = document.querySelector('.types');
     typesContainer.innerHTML = '';
     pokemon.tipos.forEach(type => {

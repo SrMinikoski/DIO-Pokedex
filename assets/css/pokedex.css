@@ -258,17 +258,27 @@
 		background-color: #92CD41;
 		color: #fff;
 		font-size: 20px;
-		padding: 10px 20px;
 		border: 4px solid #4AA52E;
+		width: 8rem;
+		margin: .2rem;
+		height: 3rem;
 		text-decoration: none;
 		display: inline-block;
 		cursor: pointer;
 		box-shadow: -4px 4px 0px #4AA52E, -5px 5px 10px #000000a2;
 
 	}
+	.reset{
+		background-color: #ccbc2a;
+		border: 4px solid #a88011;
+		box-shadow: -4px 4px 0px #a88011, -5px 5px 10px #000000a2;
+	}
 
 	.carregarmais:hover {
 		background-color: #76c442;
+	}
+	.reset:hover{
+		background-color: #e2ce17;
 	}
 
 	.carregarmais:active {
