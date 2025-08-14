@@ -12,9 +12,9 @@ function convertApiPokeToModelPoke(detalhesPokemon) {
     pokemon.tipoMain = tipo
 
     pokemon.imagem = detalhesPokemon.sprites.other.dream_world.front_default
-    pokemon.species = detalhesPokemon.species.url
-    pokemon.height = detalhesPokemon.height / 10 // Convert to meters
-    pokemon.weight = detalhesPokemon.weight / 10 // Convert to kg
+    pokemon.species = detalhesPokemon.species.url 
+    pokemon.height = detalhesPokemon.height / 10
+    pokemon.weight = detalhesPokemon.weight / 10
     pokemon.abilities = detalhesPokemon.abilities.map(ability => ability.ability.name)
     pokemon.stats = detalhesPokemon.stats.map(stat => {
         return {
@@ -25,6 +25,15 @@ function convertApiPokeToModelPoke(detalhesPokemon) {
     pokemon.moves = detalhesPokemon.moves.map(move => move.move.name)
 
     return pokemon
+}
+
+pokeApi.getPokemonSpecies = (speciesUrl) => {
+    return fetch(speciesUrl)
+        .then((response) => response.json())
+        .then((speciesData) => {
+            const genusEntry = speciesData.genera.find(genus => genus.language.name === 'en');
+            return genusEntry ? genusEntry.genus : speciesData.name;
+        });
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {

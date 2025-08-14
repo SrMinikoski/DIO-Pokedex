@@ -356,6 +356,5 @@
 
 		50% {
 			transform: translateY(-15px);
-			/* Ajuste este valor para controlar a altura do pulo */
 		}
 	}
